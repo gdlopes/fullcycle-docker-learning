@@ -6,6 +6,7 @@ services:
       context: ./api
     container_name: app
     entrypoint: dockerize -wait tcp://db:3306 node index.js
+    restart: always
     networks:
       - challange_network
     volumes:
